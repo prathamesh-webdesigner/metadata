@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Header } from "@/components/site-header";
 import { Footer } from "@/components/site-shell";
 import { SITE_URL, BRAND_NAME } from "@/lib/site-seo";
@@ -34,5 +35,10 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       { "@type": "WebSite", "@id": `${SITE_URL}/#website`, name: "Metadata", url: SITE_URL, publisher: { "@id": `${SITE_URL}/#organization` } },
     ],
   };
-  return <html lang="en"><body><Header />{children}<Footer /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} /></body></html>;
+  return <html lang="en"><head>
+    <Script async src="https://www.googletagmanager.com/gtm.js?id=GTM-KJJ2C73X" strategy="beforeInteractive" />
+    <Script id="google-analytics-init" strategy="beforeInteractive">{`window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());`}</Script>
+  </head><body><Header />{children}<Footer /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} /></body></html>;
 }
