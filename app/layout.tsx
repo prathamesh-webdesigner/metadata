@@ -10,6 +10,9 @@ export const metadata: Metadata = {
   title: { default: "Free On-Page SEO Analyzer & Website SEO Checker | Metadata", template: "%s | Metadata" },
   description: "Free on-page SEO analyzer to check website titles, meta descriptions, headings, links, images, and technical SEO. Get a clear SEO report in seconds.",
   applicationName: BRAND_NAME,
+  verification: {
+    google: "2o5TEh825-XYe6WF2QWNOwh-liU9bH3x7e1eMT5G9CQ",
+  },
   openGraph: {
     type: "website",
     siteName: BRAND_NAME,
