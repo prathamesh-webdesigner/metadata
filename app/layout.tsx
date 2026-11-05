@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import Script from "next/script";
 import { Header } from "@/components/site-header";
 import { Footer } from "@/components/site-shell";
@@ -9,6 +9,23 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: { default: "Free On-Page SEO Analyzer & Website SEO Checker | Metadata", template: "%s | Metadata" },
   description: "Free on-page SEO analyzer to check website titles, meta descriptions, headings, links, images, and technical SEO. Get a clear SEO report in seconds.",
+  authors: [{ name: "NivishDigital", url: "https://nivishdigital.com/" }],
+  generator: "Next.js",
+  robots: { index: true, follow: true },
+  keywords: [
+    "free on-page SEO analyzer",
+    "website SEO checker",
+    "SEO audit tool",
+    "meta tag checker",
+    "meta title checker",
+    "meta description checker",
+    "website metadata analyzer",
+    "technical SEO checker",
+    "SEO report tool",
+    "Open Graph checker",
+    "heading checker",
+    "image alt text checker",
+  ],
   applicationName: BRAND_NAME,
   verification: {
     google: "2o5TEh825-XYe6WF2QWNOwh-liU9bH3x7e1eMT5G9CQ",
@@ -28,6 +45,10 @@ export const metadata: Metadata = {
     images: ["/opengraph-image"],
   },
   icons: { icon: [{ url: "/favicon.svg", type: "image/svg+xml" }] },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#2563eb",
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
