@@ -73,6 +73,14 @@ export function HomeContent() {
 
       <section className="section why-section"><div className="container why-layout"><div className="why-card"><div className="why-icon"><ShieldCheck size={23} /></div><h3>Built for clarity,<br />not just crawlers.</h3><p>SEO can feel complicated. Metadata turns page-level signals into a readable checklist so you can focus on changes that help real people.</p><span className="why-url">metadata.nivishdigital.com <ArrowUpRight size={14} /></span></div><div className="why-copy"><span className="section-label">WHY METADATA</span><h2>A helpful starting point<br />for better on-page SEO.</h2><p>Understand what is present, what may need attention, and why. Use findings as a starting point for your own review—not a substitute for context or expertise.</p><ul>{["Completely free, no account required", "Fast checks from actual public HTML", "Recommendations in plain language", "Shareable, downloadable report"].map((item) => <li key={item}><span><Check size={14} /></span>{item}</li>)}</ul></div></div></section>
 
+      <section className="section related-tool-section">
+        <div className="container section-heading">
+          <span className="section-label">RELATED FREE TOOL</span>
+          <h2>Make your website images <span>lighter to load.</span></h2>
+          <p>Large image files can slow down a page. Before publishing, use our <a href="https://compress.nivishdigital.com/" target="_blank" rel="noopener noreferrer">free image and PDF compressor</a> to reduce file sizes, then add descriptive alt text to help people understand each image.</p>
+        </div>
+      </section>
+
       <section className="section faq-section" id="faq"><div className="container faq-layout"><div className="faq-side"><span className="section-label">GOOD TO KNOW</span><h2>Questions,<br /><span>answered.</span></h2><p>Want to know more about how an analysis works?</p><Link className="text-link" href="/faq/">Visit the FAQ <ArrowRight size={17} /></Link></div>      <div className="faq-list">{siteFaqs.slice(0, 5).map(({ question, answer }) => <details className="faq-item" key={question}><summary>{question}<ChevronDown size={17} /></summary><p>{answer}</p></details>)}</div></div></section>
 
       <section className="cta-section"><div className="cta-inner container"><div><span className="section-label">YOUR NEXT STEP</span><h2>See your website<br />with fresh eyes.</h2><p>Get a clear snapshot of your on-page SEO. Free, fast, and ready when you are.</p></div><Link className="button cta-button" href="/#analyzer">Analyze a website <ArrowRight size={18} /></Link></div></section>

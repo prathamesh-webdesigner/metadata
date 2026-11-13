@@ -22,7 +22,7 @@ export function Footer() {
         </div>
         <div><h3>Quick links</h3><Link href="/">Home</Link><Link href="/#analyzer">SEO Analyzer</Link><Link href="/about-us/">About Us</Link><Link href="/contact-us/">Contact Us</Link></div>
         <div><h3>Legal</h3><Link href="/privacy-policy/">Privacy Policy</Link><Link href="/terms-and-conditions/">Terms &amp; Conditions</Link><Link href="/disclaimer/">Disclaimer</Link><Link href="/faq/">FAQs</Link></div>
-        <div><h3>SEO tools</h3>{tools.map(({ label, icon: Icon }) => <Link key={label} href="/#features"><Icon size={15} />{label}</Link>)}</div>
+        <div><h3>SEO tools</h3>{tools.map(({ label, icon: Icon }) => <Link key={label} href="/#features"><Icon size={15} />{label}</Link>)}<a href="https://compress.nivishdigital.com/" target="_blank" rel="noopener noreferrer"><Image size={15} />Image &amp; PDF Compressor</a></div>
       </div>
       <div className="footer-bottom container"><span>© 2026 Metadata by NivishDigital. All rights reserved.</span><span className="footer-note"><ShieldCheck size={14} /> Free on-page SEO analysis</span></div>
     </footer>
